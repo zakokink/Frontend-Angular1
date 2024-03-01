@@ -1,11 +1,11 @@
 pipeline {
   agent any
   environment {
-        IMAGE_REPO_NAME="frontend-angular"
+        IMAGE_REPO_NAME="frontend_angular"
         IMAGE_TAG="v1"
         AWS_DEFAULT_REGION="eu-central-1"
         AWS_ACCOUNT_ID="992382586240"
-        REPOSITORY_URI="992382586240.dkr.ecr.eu-central-1.amazonaws.com/frontend-angular"
+        REPOSITORY_URI="992382586240.dkr.ecr.eu-central-1.amazonaws.com/frontend_angular"
   }
   stages {
     stage("BUILD DOCKER IMAGE") {
