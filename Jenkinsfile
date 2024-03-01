@@ -24,7 +24,7 @@ pipeline {
    }
     stage("DEPLOY & ACTIVATE") {
       steps {
-        echo 'Deploy on ECS'
+        sh """aws ecs create-task-set --cluster Cluster --service Frontend_Service --task-definition frontend_angular"""
       }
     }
   }
