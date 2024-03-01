@@ -24,7 +24,9 @@ pipeline {
    }
     stage("DEPLOY & ACTIVATE") {
       steps {
-        sh """aws ecs run-task --cluster Cluster --task-definition frontend"""
+        sh """aws ecs run-task --cluster Cluster --task-definition frontend --network-configuration "awsvpcConfiguration={subnets=[subnet-0c8d052e4834bb21c
+],securityGroups=[sg-01c71622baffcf944]}"
+"""
       }
     }
   }
