@@ -24,7 +24,7 @@ pipeline {
    }
     stage("DEPLOY & ACTIVATE") {
       steps {
-        sh """aws ecs create-task-set --cluster Cluster --service Frontend_Service --task-definition frontend"""
+        sh """aws ecs run-task --cluster Cluster --task-definition frontend"""
       }
     }
   }
