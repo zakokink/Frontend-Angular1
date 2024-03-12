@@ -3,8 +3,7 @@ pipeline {
   environment {
         IMAGE_REPO_NAME="frontend_angular"
         IMAGE_TAG="v1"
-        
-  }
+        }
   stages {
     stage("BUILD DOCKER IMAGE") {
       steps {
@@ -16,4 +15,3 @@ pipeline {
      
     }
   }
-
